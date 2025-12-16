@@ -158,7 +158,7 @@ if (require(forecast) & require(testthat)) {
       expect_true(all(names(hm$weights) == hm$models))
       # Ensure the models are of the expected classes
       expect_true("ARIMA" %in% class(hm$auto.arima))
-      expect_true("ets" == class(hm$ets))
+      expect_true("ets" %in% class(hm$ets))
       expect_true("thetam" %in% class(hm$thetam))
       expect_true("stlm" %in% class(hm$stlm))
       expect_true("forecast" %in% class(hm$snaive))
